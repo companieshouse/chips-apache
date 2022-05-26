@@ -1,8 +1,11 @@
 FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-serverjre:1.0.0 as builder
 
 COPY apache*.tar .
+COPY CHIPSviewer*.tar .
 
-RUN tar -xvf apache*.tar
+RUN tar -xvf apache*.tar && \
+    cd apache && \
+    tar -xvf ../CHIPSviewer*.tar
 
 FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-apache:1.1.0
 
