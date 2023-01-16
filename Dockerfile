@@ -18,5 +18,8 @@ COPY chips-http.conf conf
 RUN echo "Include conf/chips-http.conf" >> conf/httpd.conf && \
     sed -i 's/^#LoadModule expires_module/LoadModule expires_module/' conf/httpd.conf
 
+# Copy over maintenance page
+COPY maintenance htdocs/maintenance/
+
 # Copy over static content from the builder image
 COPY --from=builder apache htdocs/chips/
