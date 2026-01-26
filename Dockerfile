@@ -5,7 +5,7 @@ COPY apache*.tar CHIPSviewer*.tar ./
 RUN tar -xvf apache*.tar && \
     tar -xvf CHIPSviewer*.tar -C apache
 
-FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-apache:2.0.1
+FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-apache:2.0.3
 
 # Copy favicon.ico
 COPY favicon.ico htdocs
