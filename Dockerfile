@@ -4,7 +4,7 @@ COPY apache*.tar ./
 
 RUN tar -xvf apache*.tar
 
-FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-apache:2.0.6
+FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-apache:2.0.7
 
 # Copy favicon.ico
 COPY favicon.ico htdocs
